@@ -1,0 +1,19 @@
+MIME-Version: 1.0
+Date: Wed, 10 Jul 2024 21:54:58 -0500
+Message-ID: <CAJQzHCRZBvkbBYgK1PtRUjzkhHza-n1FRd1M4voKHyOG6=P15A@mail.gmail.com>
+Subject: link en cuerpo
+From: Stiven Diaz <stivendiazagudelo@gmail.com>
+To: Stiven Diaz <stivendiazagudelo@gmail.com>
+Content-Type: multipart/alternative; boundary="00000000000095a330061cefe3b0"
+
+--00000000000095a330061cefe3b0
+Content-Type: text/plain; charset="UTF-8"
+
+https://jsonplaceholder.typicode.com/
+
+--00000000000095a330061cefe3b0
+Content-Type: text/html; charset="UTF-8"
+
+<div dir="ltr"><a href="https://jsonplaceholder.typicode.com/">https://jsonplaceholder.typicode.com/</a><br></div>
+
+--00000000000095a330061cefe3b0--
