@@ -1,10 +1,14 @@
 {
   "name": "real-challenge",
   "version": "0.0.1",
-  "description": "",
-  "author": "",
+  "description": "This is a project that follows clean architecture and DDD principles it uses the NestJS framework. The project is a mail parser API that reads an email file and returns the JSON data in the email file. The email files are in eml format. The API has only one endpoint that takes the file path of the email file as a parameter and returns the JSON data in the email file.",
+  "author": "stivendiaz",
   "private": true,
   "license": "UNLICENSED",
+  "engines": {
+    "npm": ">=10.5.0",
+    "node": ">=21.7.3"
+  },
   "scripts": {
     "build": "nest build",
     "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
