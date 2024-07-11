@@ -17,6 +17,12 @@ export class MailParserController {
 
     @Get(':path')
     async findOne(@Param('path') path: string) {
+        if (!path) {
+            this.exceptionService.badRequestException({
+                message: 'Path is required',
+            });
+        }
+
         const response = await this.getJsonFileUseCase
             .getInstance()
             .execute(path);
