@@ -29,7 +29,6 @@ export class ResponseInterceptor<T>
         context: ExecutionContext,
         next: CallHandler,
     ): Observable<ResponseFormat<T>> {
-        console.log('entro al interseptor');
         const now = Date.now();
         const httpContext = context.switchToHttp();
         const request = httpContext.getRequest();

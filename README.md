@@ -24,7 +24,10 @@
 
 ## Description
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+This is a project that follows clean architecture and DDD principles it uses the NestJS framework. The project is a mail parser API that reads an email file and returns the JSON data in the email file. The email files are in `eml` format. The API has only one endpoint that takes the file path of the email file as a parameter and returns the JSON data in the email file. 
+
+possible next steps:
+- create an endpoint that takes the email file as a parameter and returns the JSON data in the email file.
 
 ## Installation
 
@@ -45,18 +48,55 @@ $ npm run start:dev
 $ npm run start:prod
 ```
 
-## Test
+# API Documentation
+
+## Mail Parser API
+
+Note: There are four email files in the `files` directory. The email files are in the `eml` format, if you are using bash, you can use the `pwd` command to get the full path of the `files` directory. like the example below:
 
 ```bash
-# unit tests
-$ npm run test
-
-# e2e tests
-$ npm run test:e2e
-
-# test coverage
-$ npm run test:cov
+$ cd {reponame}/files
+$ ls
+attachedfile.eml  emptyemail.eml  innerlinkinbody.eml  linkinbody.eml
+$ pwd
+/Users/mac/Documents/designli/challenge/files
 ```
+
+Email types:
+
+- `emptyemail.eml` - email with an empty body and no attachments
+- `attachedfile.eml` - email with an attached json file
+- `linkinbody.eml` - email with a link in the body that goes to a json
+- `innerlinkinbody.eml` - email with a link in the body that goes to a web page that has a link to a json
+
+### GET /mail-parser
+ Parameters:
+  - `path` (mandatory) - file path to the email file: `string`: `path/files/attachedfile.eml`
+ Responses:
+  - `200 OK`:
+    body:
+    ```json
+      {
+        "data": {
+          "name": "John Doe",
+          "age": 25,
+          "email": "johndoe@example.com",
+          "address": {
+            "street": "123 Main St",
+            "city": "New York",
+            "state": "NY",
+            "zip": "10001"
+          }
+        },
+        "isArray": false,
+        "path": "/mailParser/%2FUsers%2Fmac%2FDocuments%2Fdesignli%2Freal-challenge%2Ffiles%2Femail.eml",
+        "duration": "151ms",
+        "method": "GET"
+      }
+      ```
+  - `400 Bad Request` - missing `path` parameter
+  - `404 Not Found` - json not found
+  - `500 Internal Server Error` - internal server error
 
 ## Support
 

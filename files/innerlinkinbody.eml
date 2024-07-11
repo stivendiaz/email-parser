@@ -9,11 +9,11 @@ Content-Type: multipart/alternative; boundary="00000000000095a330061cefe3b0"
 --00000000000095a330061cefe3b0
 Content-Type: text/plain; charset="UTF-8"
 
-http://date.jsontest.com/
+https://www.jsontest.com/
 
 --00000000000095a330061cefe3b0
 Content-Type: text/html; charset="UTF-8"
 
-<div dir="ltr"><a href="http://date.jsontest.com/">http://date.jsontest.com/</a><br></div>
+<div dir="ltr"><a href="https://www.jsontest.com/">https://www.jsontest.com/</a><br></div>
 
 --00000000000095a330061cefe3b0--
